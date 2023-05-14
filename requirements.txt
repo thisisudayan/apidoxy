@@ -4,3 +4,4 @@ rembg
 imgbbpy
 uuid6
 numpy==1.21.6
+scipy==1.7.3
