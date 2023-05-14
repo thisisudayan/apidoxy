@@ -3,3 +3,4 @@ Gunicorn
 rembg
 imgbbpy
 uuid6
+sciPy
