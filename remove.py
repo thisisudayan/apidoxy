@@ -1,4 +1,3 @@
-from flask import Flask, render_template, request
 from rembg import remove
 from PIL import Image
 import requests
@@ -24,21 +23,3 @@ def removebackground(url):
     output = remove(input)
     output.save('temp/' + imagename)
     return asyncio.run(imgbbuploader(imagename))
-
-
-app = Flask(__name__)
-
-@app.route('/')
-def home():
-    return render_template('index.html')
-
-@app.route('/api/removebg')
-def removebg():
-    url = request.args.get('url')
-    if(url):
-        return removebackground(url)
-    else:
-        return 'error'
-
-if __name__ == '__main__':
-    app.run()
