@@ -3,5 +3,3 @@ Gunicorn
 rembg
 imgbbpy
 uuid6
-numpy
-scipy
