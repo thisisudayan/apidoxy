@@ -34,6 +34,7 @@ def home():
 
 @app.route('/api/removebg')
 def removebg():
+    print('trying to remove background')
     url = request.args.get('url')
     if(url):
         return removebackground(url)
