@@ -1,5 +1,0 @@
-Flask
-Gunicorn
-rembg
-imgbbpy
-uuid6

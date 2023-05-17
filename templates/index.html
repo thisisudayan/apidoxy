@@ -136,8 +136,7 @@
         },
         download() {
           const a = document.createElement('a')
-          a.href = this.removedimage
-          a.download = this.removedimage.split('/').pop()
+          a.download = a.href = this.removedimage
           document.body.appendChild(a)
           a.click()
           document.body.removeChild(a)
