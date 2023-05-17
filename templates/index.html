@@ -32,7 +32,7 @@
                   <v-tab>
                     Original Image
                   </v-tab>
-                  <v-tab>
+                  <v-tab v-show="removedimage!=''">
                     Removed Background
                   </v-tab>
                 </v-tabs>
@@ -58,7 +58,7 @@
                       <v-img class="rounded ma-4" max-height="350" max-width="350" :src="removedimage"></v-img>
                     </div>
                       <v-sheet class="d-flex flex-column pa-4 justify-center">
-                        <v-btn @click="download" class="rounded-pill ma-1" color="primary" :disabled="isloading==true" width="200">Download HD</v-btn>
+                        <v-btn href="https://www.w3schools.com/images/myw3schoolsimage.jpg" download="afnaf.jpg" class="rounded-pill ma-1" color="primary" :disabled="isloading==true" width="200">Download HD</v-btn>
                       </v-sheet>
                   </v-tab-item>
                 </v-tabs-items>
@@ -136,7 +136,8 @@
         },
         download() {
           const a = document.createElement('a')
-          a.download = a.href = this.removedimage
+          a.href = a.href = this.removedimage
+          a.download = "Removed background.png"
           document.body.appendChild(a)
           a.click()
           document.body.removeChild(a)
